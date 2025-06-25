@@ -17,7 +17,7 @@ public class ProjectzeroOneApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		var consumoApi = new ConsumoApi();
-		var json = consumoApi.obterDados("https://www.omdbapi.com/?i=gilmore+girls&apikey=af7e489e");
+		var json = consumoApi.obterDados("https://www.omdbapi.com/?t=gilmore+girls&apikey=af7e489e");
 		System.out.println(json);
 		ConverteDados conversor = new ConverteDados();
 		DadosSerie dados = conversor.obterDados(json, DadosSerie.class);
